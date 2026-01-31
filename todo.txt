@@ -1,4 +1,4 @@
-récupérer une image
-récupérer un pixel 
-créé un pixel
-ajouter les pixel pour 
+nb to bin
+fusion bin
+separation bin
+
