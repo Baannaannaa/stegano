@@ -4,15 +4,13 @@ Ce script cache une image `.jpg` dans une autre en utilisant les bits de poids f
 
 ## Prérequis
 - Python 3
-- Pillow : `pip install pillow` [web:1]
+- Pillow : `pip install pillow`
 
 ## Dossiers attendus
 Le programme attend **exactement 1** fichier `.jpg` dans chaque dossier :
 image_de_base/image_visible/
 image_de_base/image_cache/
 image_a_decoder/
-
-text
 
 ## Utilisation
 1. Mets une image dans `image_de_base/image_visible/` et une autre dans `image_de_base/image_cache/`.
