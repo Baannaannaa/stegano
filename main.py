@@ -4,7 +4,7 @@ import glob
 
 def recupererimages(a):
     erreur = False
-    tab = glob.glob(a+"/*.jpg")
+    tab = glob.glob(a+"/*.png")
     if len(tab)!=1:
         print("Erreur: nombre de fichier dans image_de_base/"+a+" différent de 1")
         erreur = True
@@ -86,7 +86,7 @@ def coder_image():
 
         tabimgv = tab_bin_to_int(tabimgv, largeurv, hauteurv)
 
-        cree_image(tabimgv, largeurv, hauteurv, "code.jpg")
+        cree_image(tabimgv, largeurv, hauteurv, "code.png")
 
 
 def decoder_image():
@@ -108,7 +108,7 @@ def decoder_image():
         
         tabimgcode = tab_bin_to_int(tabimgcode, largeurcode, hauteurcode)
 
-        cree_image(tabimgcode, largeurcode, hauteurcode, "decode.jpg")
+        cree_image(tabimgcode, largeurcode, hauteurcode, "decode.png")
 
 
 def main():
