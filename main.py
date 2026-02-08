@@ -62,7 +62,7 @@ def decodebin(tab,largeur, hauteur ):
     return tab
 
 
-def main():
+def coder_image():
     #coder l'image
     imv = recupererimages("image_de_base/image_visible")
     imc = recupererimages("image_de_base/image_cache")
@@ -89,6 +89,7 @@ def main():
         cree_image(tabimgv, largeurv, hauteurv, "code.jpg")
 
 
+def decoder_image():
     #decoder l'image
     imcode = recupererimages("image_a_decoder")
 
@@ -101,17 +102,19 @@ def main():
         
         tabimgcode = recupererpixel(tabimgcode, imgcode, largeurcode, hauteurcode)
         
-        tabimgcode = tab_int_to_bin(tabimgv, largeurcode, hauteurcode)
+        tabimgcode = tab_int_to_bin(tabimgcode, largeurcode, hauteurcode)
         
         tabimgcode = decodebin(tabimgcode, largeurcode, hauteurcode)
         
         tabimgcode = tab_bin_to_int(tabimgcode, largeurcode, hauteurcode)
 
         cree_image(tabimgcode, largeurcode, hauteurcode, "decode.jpg")
-    
+
+
+def main():
+    coder_image()
+    decoder_image()
     print("Fin")
-    
-    return 0
 
 
 main()
